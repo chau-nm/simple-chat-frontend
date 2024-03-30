@@ -1,0 +1,15 @@
+.messageWrapper {
+  display: flex;
+  padding: 5px;
+
+  .message {
+    padding: 5px;
+    border: 1px solid rgba($color: #8a8a8a, $alpha: 0.5);
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #aeaeae;
+  }
+}
+
+.self {
+  justify-content: end;
+}

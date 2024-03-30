@@ -1,0 +1,53 @@
+.loginFormWrapper {
+  width: 400px;
+  padding: 10px;
+  box-shadow: 2px 2px 5px #989898;
+  border-radius: 5px;
+  border: 1px solid #767676;
+
+  .loginFormTitle {
+    text-align: center;
+    padding: 20px 0;
+
+    h3 {
+      font-size: 2rem;
+    }
+  }
+
+  .loginForm {
+    * {
+      font-size: 1.25rem;
+    }
+
+    .formItem {
+      margin: 10px 0;
+      display: flex;
+
+      label {
+        display: block;
+        flex: 25%;
+      }
+
+      input {
+        display: block;
+        flex: 75%;
+        outline: none;
+        border: 1px solid #acacac;
+        padding: 3px 8px;
+        transition: 0.3s;
+
+        &:hover,
+        &:focus {
+          border: 1px solid #717171;
+          box-shadow: 1px 1px 1px #717171;
+        }
+      }
+
+      button {
+        flex-grow: 1;
+        cursor: pointer;
+        padding: 3px 0;
+      }
+    }
+  }
+}

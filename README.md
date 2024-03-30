@@ -1,17 +1,5 @@
 # Getting Started with Simple React Template
 
-#### Overview
-This project is react typescript template.
-
-| Base libaries|
-|--------------|
-|react-router-dom|
-|sass, node-sass|
-|eslint, prettier|
-
-#### Clone project
-You can clone project with command: git clone https://github.com/chau-nm/simple-react-template.git
-
 #### `yarn start`
 
 Runs the app in the development mode.\

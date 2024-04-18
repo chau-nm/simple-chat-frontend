@@ -1,5 +1,5 @@
-import { FC } from "react";
-import { BaseRoute } from "./BaseRouter";
+import { type FC } from 'react';
+import { BaseRoute } from './BaseRouter';
 
 const App: FC = () => {
   return (

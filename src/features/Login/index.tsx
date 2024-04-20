@@ -1,8 +1,27 @@
+import { login } from 'apis/auth/login';
 import React, { useState, type FC } from 'react';
+import { useMutation } from 'react-query';
+import { type SignInType } from 'types';
 import styles from './login.module.scss';
 import { type FormLogin } from './types';
 
 const Login: FC = () => {
+  const loginMutation = useMutation(
+    async ({ username, password }: SignInType) => {
+      const respone = await login({ username, password });
+      return respone.data;
+    },
+    {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      onSuccess: (data: any) => {
+        console.log(data);
+      },
+      onError: (data) => {
+        console.log(data);
+      },
+    },
+  );
+
   const [formItemValues, setFormItemValues] = useState<FormLogin>({
     username: '',
     password: '',
@@ -30,7 +49,11 @@ const Login: FC = () => {
     });
   };
 
-  const handleSubmit = (): void => {};
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
+    event.preventDefault();
+    console.log(formItemValues);
+    loginMutation.mutate(formItemValues);
+  };
 
   return (
     <div className={styles.loginFormWrapper}>
